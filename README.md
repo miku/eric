@@ -30,3 +30,9 @@ $ urlbisect -u https://files.eric.ed.gov/fulltext/ED@.pdf -f 0 -t 1000000 -v
 2025/05/02 01:04:48 [200] https://files.eric.ed.gov/fulltext/ED567241.pdf https://files.eric.ed.gov/fulltext/ED567241.pdf
 567241 https://files.eric.ed.gov/fulltext/ED567241.pdf
 ```
+
+Seedlist:
+
+```
+$ seq -f "%06g" 1 567241 | awk '{print "https://files.eric.ed.gov/fulltext/ED"$0".pdf"}' > seedlist.txt
+```
